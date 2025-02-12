@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Amenities available in properties",
+ "doctype": "DocType",
+ "document_type": "Child Table",
+ "engine": "InnoDB",
+ "field_order": [
+  "amenity_name",
+  "amenity_description",
+  "amenity_parent",
+  "amenity_parentfield",
+  "amenity_parenttype"
+ ],
+ "fields": [
+  {
+   "fieldname": "amenity_name",
+   "fieldtype": "Data",
+   "label": "Amenity Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amenity_description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "amenity_parent",
+   "fieldtype": "Link",
+   "label": "Parent",
+   "options": "Property",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amenity_parentfield",
+   "fieldtype": "Data",
+   "label": "Parent Field",
+   "hidden": 1
+  },
+  {
+   "fieldname": "amenity_parenttype",
+   "fieldtype": "Data",
+   "label": "Parent Type",
+   "hidden": 1
+  }
+ ],
+ "icon": "fa fa-list-alt",
+ "links": [],
+ "module": "PropVault",
+ "name": "Amenities",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "amenity_name"
+}

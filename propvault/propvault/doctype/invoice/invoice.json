@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Invoices for rental and property management services",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_property",
+  "invoice_tenant",
+  "invoice_date",
+  "invoice_due_date",
+  "invoice_total_amount",
+  "invoice_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Unpaid\nPaid\nOverdue",
+   "reqd": 1
+  }
+ ],
+ "icon": "fa fa-file-invoice",
+ "links": [],
+ "module": "PropVault",
+ "name": "Invoice",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "invoice_id"
+}

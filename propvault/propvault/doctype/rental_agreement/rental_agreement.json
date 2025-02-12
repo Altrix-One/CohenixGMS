@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Rental agreements between tenants and landlords",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "rent_property",
+  "rent_tenant",
+  "rent_start_date",
+  "rent_end_date",
+  "rent_rent_amount",
+  "rent_status",
+  "rent_attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "rent_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nTerminated\nExpired"
+  },
+  {
+   "fieldname": "rent_attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "icon": "fa fa-file-contract",
+ "links": [],
+ "module": "PropVault",
+ "name": "Rental Agreement",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "rent_property"
+}

@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Details of properties managed by the agency",
+ "doctype": "DocType",
+ "document_type": "Master",
+ "engine": "InnoDB",
+ "field_order": [
+  "property_property_id",
+  "property_name",
+  "property_type",
+  "property_location",
+  "property_owner",
+  "property_status",
+  "property_rental_price",
+  "property_sale_price",
+  "property_description",
+  "property_amenities",
+  "property_attachments",
+  "property_num_bedrooms",
+  "property_num_bathrooms",
+  "property_total_area",
+  "property_parking_availability",
+  "property_floor_number",
+  "property_total_floors",
+  "property_furnished_status",
+  "property_year_built",
+  "property_maintenance_fee",
+  "property_deposit_required",
+  "property_availability_date",
+  "property_tenant_details",
+  "property_electricity_availability",
+  "property_water_supply",
+  "property_internet_ready",
+  "property_security_features",
+  "property_green_certification",
+  "property_property_images",
+  "property_video_tour_url",
+  "property_legal_documents",
+  "property_inspection_date",
+  "property_last_maintenance_date",
+  "property_maintenance_notes",
+  "property_agent_assigned",
+  "property_marketing_status",
+  "property_listed_platforms",
+  "property_tags",
+  "property_property_condition",
+  "property_zoning_type",
+  "property_property_tax_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "label": "Property Name",
+   "placeholder": "Enter property name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PROP-.YYYY.-\nPROP-.MM.-\nPROP-.####"
+  },
+  {
+   "fieldname": "property_location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "property_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Owner"
+  },
+  {
+   "fieldname": "property_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nRented\nSold\nUnder Maintenance\nPending Approval"
+  },
+  {
+   "fieldname": "property_rental_price",
+   "fieldtype": "Currency",
+   "label": "Rental Price"
+  },
+  {
+   "fieldname": "property_sale_price",
+   "fieldtype": "Currency",
+   "label": "Sale Price"
+  },
+  {
+   "fieldname": "property_description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "property_amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Amenities"
+  },
+  {
+   "fieldname": "property_attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "property_num_bedrooms",
+   "fieldtype": "Int",
+   "label": "Number of Bedrooms"
+  },
+  {
+   "fieldname": "property_num_bathrooms",
+   "fieldtype": "Int",
+   "label": "Number of Bathrooms"
+  },
+  {
+   "fieldname": "property_total_area",
+   "fieldtype": "Float",
+   "label": "Total Area (Sq. Ft.)"
+  },
+  {
+   "fieldname": "property_parking_availability",
+   "fieldtype": "Select",
+   "label": "Parking Availability",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_floor_number",
+   "fieldtype": "Int",
+   "label": "Floor Number"
+  },
+  {
+   "fieldname": "property_total_floors",
+   "fieldtype": "Int",
+   "label": "Total Floors in Building"
+  },
+  {
+   "fieldname": "property_furnished_status",
+   "fieldtype": "Select",
+   "label": "Furnished Status",
+   "options": "Fully Furnished\nPartially Furnished\nUnfurnished"
+  },
+  {
+   "fieldname": "property_year_built",
+   "fieldtype": "Int",
+   "label": "Year Built"
+  },
+  {
+   "fieldname": "property_maintenance_fee",
+   "fieldtype": "Currency",
+   "label": "Maintenance Fee"
+  },
+  {
+   "fieldname": "property_deposit_required",
+   "fieldtype": "Currency",
+   "label": "Deposit Required"
+  },
+  {
+   "fieldname": "property_availability_date",
+   "fieldtype": "Date",
+   "label": "Availability Date"
+  },
+  {
+   "fieldname": "property_tenant_details",
+   "fieldtype": "Link",
+   "label": "Tenant Details",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "property_electricity_availability",
+   "fieldtype": "Select",
+   "label": "Electricity Availability",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_water_supply",
+   "fieldtype": "Select",
+   "label": "Water Supply",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_internet_ready",
+   "fieldtype": "Select",
+   "label": "Internet Ready",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_security_features",
+   "fieldtype": "Data",
+   "label": "Security Features"
+  },
+  {
+   "fieldname": "property_green_certification",
+   "fieldtype": "Select",
+   "label": "Green Certification",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_property_images",
+   "fieldtype": "Table",
+   "label": "Property Images",
+   "options": "Property Image"
+  },
+  {
+   "fieldname": "property_video_tour_url",
+   "fieldtype": "Data",
+   "label": "Video Tour URL"
+  },
+  {
+   "fieldname": "property_legal_documents",
+   "fieldtype": "Attach",
+   "label": "Legal Documents"
+  },
+  {
+   "fieldname": "property_inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "property_last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "property_maintenance_notes",
+   "fieldtype": "Text",
+   "label": "Maintenance Notes"
+  },
+  {
+   "fieldname": "property_agent_assigned",
+   "fieldtype": "Link",
+   "label": "Agent Assigned",
+   "options": "Propvault User"
+  },
+  {
+   "fieldname": "property_marketing_status",
+   "fieldtype": "Select",
+   "label": "Marketing Status",
+   "options": "Active\nInactive\nFeatured"
+  },
+  {
+   "fieldname": "property_listed_platforms",
+   "fieldtype": "Table",
+   "label": "Listed Platforms",
+   "options": "Platform"
+  },
+  {
+   "fieldname": "property_tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "property_property_condition",
+   "fieldtype": "Select",
+   "label": "Property Condition",
+   "options": "New\nGood\nNeeds Renovation"
+  },
+  {
+   "fieldname": "property_zoning_type",
+   "fieldtype": "Data",
+   "label": "Zoning Type"
+  },
+  {
+   "fieldname": "property_property_tax_id",
+   "fieldtype": "Data",
+   "label": "Property Tax ID"
+  }
+ ],
+ "icon": "fa fa-home",
+ "links": [],
+ "module": "PropVault",
+ "name": "Property",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "property_name"
+}

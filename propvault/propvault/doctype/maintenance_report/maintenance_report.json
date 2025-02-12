@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Maintenance reports for properties",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "maintenance_property",
+  "maintenance_reported_by",
+  "maintenance_report_date",
+  "maintenance_status",
+  "maintenance_details",
+  "maintenance_attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintenance_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_reported_by",
+   "fieldtype": "Data",
+   "label": "Reported By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_report_date",
+   "fieldtype": "Date",
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_details",
+   "fieldtype": "Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "maintenance_attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "icon": "fa fa-tools",
+ "links": [],
+ "module": "PropVault",
+ "name": "Maintenance Report",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "maintenance_property"
+}

@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Service requests for properties",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_property",
+  "service_request_type",
+  "service_details",
+  "service_requested_by",
+  "service_request_date",
+  "service_assigned_vendor",
+  "service_status",
+  "service_priority",
+  "service_attachments",
+  "service_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "options": "Cleaning\nRepair\nPest Control\nOther"
+  },
+  {
+   "fieldname": "service_details",
+   "fieldtype": "Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "service_requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "Propvault User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_assigned_vendor",
+   "fieldtype": "Link",
+   "label": "Assigned Vendor",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "service_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted\nClosed"
+  },
+  {
+   "fieldname": "service_priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "service_attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "service_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "icon": "fa fa-wrench",
+ "links": [],
+ "module": "PropVault",
+ "name": "Service Request",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "service_property"
+}

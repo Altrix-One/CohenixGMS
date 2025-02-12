@@ -1,0 +1,41 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "autoname": "hash",
+    "creation": "2024-12-02 00:00:00",
+    "description": "Child table for rental agreements linked to tenants",
+    "doctype": "DocType",
+    "document_type": "Child Table",
+    "engine": "InnoDB",
+    "fields": [
+     {
+      "fieldname": "ten_property",
+      "fieldtype": "Data",
+      "label": "Property"
+     },
+     {
+      "fieldname": "ten_start_date",
+      "fieldtype": "Date",
+      "label": "Start Date"
+     },
+     {
+      "fieldname": "ten_end_date",
+      "fieldtype": "Date",
+      "label": "End Date"
+     },
+     {
+      "fieldname": "ten_rent_amount",
+      "fieldtype": "Currency",
+      "label": "Rent Amount"
+     },
+     {
+      "fieldname": "ten_status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nTerminated\nExpired"
+     }
+    ],
+    "module": "PropVault",
+    "name": "Tenant Rental History",
+    "permissions": []
+   }

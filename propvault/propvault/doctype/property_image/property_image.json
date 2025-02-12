@@ -1,0 +1,59 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "allow_rename": 0,
+    "autoname": "hash",
+    "creation": "2024-12-02 12:00:00",
+    "description": "Images associated with properties",
+    "doctype": "DocType",
+    "document_type": "Master",
+    "engine": "InnoDB",
+    "field_order": [
+     "prop_property",
+     "prop_image",
+     "prop_image_type",
+     "prop_description"
+    ],
+    "fields": [
+     {
+      "fieldname": "prop_property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1
+     },
+     {
+      "fieldname": "prop_image",
+      "fieldtype": "Attach Image",
+      "label": "Image",
+      "reqd": 1
+     },
+     {
+      "fieldname": "prop_image_type",
+      "fieldtype": "Select",
+      "label": "Image Type",
+      "options": "Exterior\nInterior\nBlueprint\nOther",
+      "reqd": 1
+     },
+     {
+      "fieldname": "prop_description",
+      "fieldtype": "Text",
+      "label": "Description",
+      "reqd": 0
+     }
+    ],
+    "icon": "fa fa-image",
+    "links": [],
+    "module": "PropVault",
+    "name": "Property Image",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "write": 1,
+      "role": "Property Manager"
+     }
+    ],
+    "title_field": "prop_property"
+   }

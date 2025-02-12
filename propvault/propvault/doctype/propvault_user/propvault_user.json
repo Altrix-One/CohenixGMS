@@ -1,0 +1,80 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "allow_rename": 0,
+    "autoname": "hash",
+    "creation": "2024-12-02 12:00:00",
+    "description": "Users associated with property management operations",
+    "doctype": "DocType",
+    "document_type": "Master",
+    "engine": "InnoDB",
+    "field_order": [
+     "Proper_full_name",
+     "Proper_email",
+     "Proper_phone_number",
+     "Proper_role",
+     "Proper_status",
+     "Proper_address",
+     "Proper_profile_picture"
+    ],
+    "fields": [
+     {
+      "fieldname": "Proper_full_name",
+      "fieldtype": "Data",
+      "label": "Full Name",
+      "reqd": 1
+     },
+     {
+      "fieldname": "Proper_email",
+      "fieldtype": "Data",
+      "label": "Email Address",
+      "reqd": 1
+     },
+     {
+      "fieldname": "Proper_phone_number",
+      "fieldtype": "Data",
+      "label": "Phone Number",
+      "reqd": 0
+     },
+     {
+      "fieldname": "Proper_role",
+      "fieldtype": "Select",
+      "label": "Role",
+      "options": "Property Manager\nTenant\nAgent\nOwner",
+      "reqd": 1
+     },
+     {
+      "fieldname": "Proper_status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nPending",
+      "reqd": 1
+     },
+     {
+      "fieldname": "Proper_address",
+      "fieldtype": "Text",
+      "label": "Address",
+      "reqd": 0
+     },
+     {
+      "fieldname": "Proper_profile_picture",
+      "fieldtype": "Attach Image",
+      "label": "Profile Picture",
+      "reqd": 0
+     }
+    ],
+    "icon": "fa fa-user",
+    "links": [],
+    "module": "PropVault",
+    "name": "Propvault User",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "write": 1,
+      "role": "Administrator"
+     }
+    ],
+    "title_field": "Proper_full_name"
+   }

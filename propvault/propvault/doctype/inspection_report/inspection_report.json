@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Inspection reports for properties",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_property",
+  "inspection_date",
+  "inspection_inspected_by",
+  "inspection_notes",
+  "inspection_attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspection_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_inspected_by",
+   "fieldtype": "Data",
+   "label": "Inspected By"
+  },
+  {
+   "fieldname": "inspection_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "inspection_attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "icon": "fa fa-search",
+ "links": [],
+ "module": "PropVault",
+ "name": "Inspection Report",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "inspection_property"
+}
+

@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Schedule for property inspections",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_property",
+  "inspection_inspection_date",
+  "inspection_inspector",
+  "inspection_purpose",
+  "inspection_status",
+  "inspection_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspection_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "options": "Propvault User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "inspection_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "icon": "fa fa-calendar-check",
+ "links": [],
+ "module": "PropVault",
+ "name": "Inspection Schedule",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "inspection_property"
+}

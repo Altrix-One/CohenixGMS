@@ -1,0 +1,62 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2024-11-30 12:00:00",
+  "description": "Maintenance Requests",
+  "doctype": "DocType",
+  "document_type": "Transaction",
+  "engine": "InnoDB",
+  "field_order": [
+   "maint_property",
+   "maint_tenant",
+   "maint_issue_date",
+   "maint_issue_description",
+   "maint_status"
+  ],
+    "fields": [
+      {
+        "fieldname": "maint_property",
+        "fieldtype": "Link",
+        "label": "Property",
+        "options": "Property"
+      },
+      {
+        "fieldname": "maint_tenant",
+        "fieldtype": "Link",
+        "label": "Tenant",
+        "options": "Tenant"
+      },
+      {
+        "fieldname": "maint_issue_date",
+        "fieldtype": "Date",
+        "label": "Issue Date"
+      },
+      {
+        "fieldname": "maint_issue_description",
+        "fieldtype": "Text",
+        "label": "Issue Description"
+      },
+      {
+        "fieldname": "maint_status",
+        "fieldtype": "Select",
+        "label": "Status",
+        "options": "Open\nIn Progress\nResolved"
+      }
+    ],
+    "icon": "fa fa-file-contract",
+    "links": [],
+    "module": "PropVault",
+    "name": "Maintenance Request",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "write": 1,
+      "role": "Property Manager"
+     }
+    ],
+    "title_field": "maint_property"
+   }

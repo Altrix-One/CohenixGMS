@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Reminders for tasks or follow-ups",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "description",
+  "due_date",
+  "assigned_to",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "remind_title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remind_description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "remind_due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remind_assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "Propvault User"
+  },
+  {
+   "fieldname": "remind_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCompleted\nOverdue"
+  }
+ ],
+ "icon": "fa fa-calendar",
+ "links": [],
+ "module": "PropVault",
+ "name": "Reminder",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "remind_title"
+}

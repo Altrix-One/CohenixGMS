@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Lease agreements between tenants and properties",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "lease_property",
+  "lease_tenant",
+  "lease_start_date",
+  "lease_end_date",
+  "lease_monthly_rent",
+  "lease_terms_conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "lease_property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_monthly_rent",
+   "fieldtype": "Currency",
+   "label": "Monthly Rent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_terms_conditions",
+   "fieldtype": "Text",
+   "label": "Terms and Conditions"
+  }
+ ],
+ "icon": "fa fa-file-contract",
+ "links": [],
+ "module": "PropVault",
+ "name": "Lease Agreement",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "lease_property"
+}

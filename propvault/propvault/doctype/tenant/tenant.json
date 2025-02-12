@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Details of tenants renting properties",
+ "doctype": "DocType",
+ "document_type": "Master",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_full_name",
+  "tenant_email",
+  "tenant_phone_number",
+  "tenant_address",
+  "tenant_id_document",
+  "tenant_rental_history",
+  "tenant_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "tenant_id_document",
+   "fieldtype": "Attach",
+   "label": "ID Document"
+  },
+  {
+    "fieldname": "tenant_rental_history",
+    "fieldtype": "Table",
+    "label": "Rental History",
+    "options": "Tenant Rental History"
+   },
+  {
+   "fieldname": "tenant_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "icon": "fa fa-user",
+ "links": [],
+ "module": "PropVault",
+ "name": "Tenant",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "tenant_email"
+}

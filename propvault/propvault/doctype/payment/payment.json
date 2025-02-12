@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Payments for invoices",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_invoice",
+  "payment_payment_date",
+  "payment_amount",
+  "payment_payment_mode",
+  "payment_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Invoice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "Cash\nCredit Card\nBank Transfer"
+  },
+  {
+   "fieldname": "payment_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "icon": "fa fa-money-bill",
+ "links": [],
+ "module": "PropVault",
+ "name": "Payment",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "payment_invoice"
+}

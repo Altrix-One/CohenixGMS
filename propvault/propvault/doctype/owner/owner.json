@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-11-30 12:00:00",
+ "description": "Details of property owners",
+ "doctype": "DocType",
+ "document_type": "Master",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "owner_name",
+  "owner_email",
+  "owner_phone",
+  "owner_address",
+  "owner_linked_properties",
+  "owner_sa_id_number"
+ ],
+ "fields": [
+
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "OWN-.YYYY.-\nOWN-.MM.-\nOWN-.####"
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name"
+  },
+  {
+   "fieldname": "owner_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "owner_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "owner_address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+    "fieldname": "owner_linked_properties",
+    "fieldtype": "Link",
+    "options": "Property",
+    "label": "Linked Properties"
+  },
+  {
+    "fieldname": "owner_sa_id_number",
+    "fieldtype": "Data",
+    "label": "SA ID Number"
+  }
+ ],
+ "icon": "fa fa-user",
+ "links": [],
+ "module": "PropVault",
+ "name": "Owner",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Property Manager"
+  }
+ ],
+ "title_field": "owner_name"
+}
