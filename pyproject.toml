@@ -1,5 +1,5 @@
 [project]
-name = "propvault"
+name = "flex"
 authors = [
     { name = "EPI-USE", email = "christiaan.swart@epiuse.com"}
 ]

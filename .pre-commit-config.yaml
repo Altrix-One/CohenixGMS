@@ -8,7 +8,7 @@ repos:
     rev: v4.3.0
     hooks:
       - id: trailing-whitespace
-        files: "propvault.*"
+        files: "flex.*"
         exclude: ".*json$|.*txt$|.*csv|.*md|.*svg"
       - id: check-yaml
       - id: check-merge-conflict
@@ -36,11 +36,11 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                propvault/public/dist/.*|
+                flex/public/dist/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                propvault/templates/includes/.*|
-                propvault/public/js/lib/.*
+                flex/templates/includes/.*|
+                flex/public/js/lib/.*
             )$
 
 
@@ -53,12 +53,12 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                propvault/public/dist/.*|
+                flex/public/dist/.*|
                 cypress/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                propvault/templates/includes/.*|
-                propvault/public/js/lib/.*
+                flex/templates/includes/.*|
+                flex/public/js/lib/.*
             )$
 
 ci:

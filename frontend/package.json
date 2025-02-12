@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/assets/propvault/frontend/ && yarn copy-html-entry",
+    "build": "vite build --base=/assets/flex/frontend/ && yarn copy-html-entry",
     "preview": "vite preview",
-    "copy-html-entry": "cp ../propvault/public/frontend/index.html ../propvault/www/frontend.html"
+    "copy-html-entry": "cp ../flex/public/frontend/index.html ../flex/www/frontend.html"
   },
   "dependencies": {
     "socket.io-client": "^4.5.1",

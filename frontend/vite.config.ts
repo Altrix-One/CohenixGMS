@@ -16,7 +16,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		outDir: '../propvault/public/frontend',
+		outDir: '../flex/public/frontend',
 		emptyOutDir: true,
 		target: 'es2015',
 	},
