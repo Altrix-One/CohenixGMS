@@ -11,15 +11,14 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "flex",
-# 		"logo": "/assets/flex/logo.png",
-# 		"title": "flex",
-# 		"route": "/flex",
-# 		"has_permission": "flex.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+ 	{
+		"name": "flex",
+ 		"logo": "/assets/flex/fit.png",
+ 		"title": "flex",
+ 		"route": "/flex"
+ 	}
+ ]
 
 # Includes in <head>
 # ------------------
